@@ -2,10 +2,6 @@
   <%=text_field_tag :query, params[:query]%>
   <%=submit_tag "Search"%><br>
 <% end %>
-<%=@students.each do |st| %>
-  <% if ! st == nil%>
-  <li>
+ <%@students.each do |st| %> 
     <%= render partial: "student", locals: {student: st} %>
-  </li>
-  <% end %>
 <% end %>
